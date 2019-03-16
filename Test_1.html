@@ -2,8 +2,15 @@
 <head>
 </head>
 <body>
-  <?php
-  echo "Code Running";
-  ?>
+  <script>
+    window.onload = () => document.body.innerHTML = "<p style='color: red;'>User Agent:</p>" + navigator.userAgent;
+    window.onclick = () => document.body.innerHTML = "<p style='color: red;'>User Agent:</p>" + navigator.userAgent;
+    window.onProgress = () => document.body.innerHTML = "<p style='color: red;'>User Agent:</p>" + navigator.userAgent;
+    window.onpointermove = () => document.body.innerHTML = "<p style='color: red;'>User Agent:</p>" + navigator.userAgent;
+    window.onload = () => document.body.innerHTML = "<p style='color: red;'>User Agent:</p>" + navigator.userAgent;
+    window.onerror = function (e) {
+      document.body.innerText += e;
+    }
+  </script>
  </body>
 </html>
